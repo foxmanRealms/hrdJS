@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="text">Hello, World!</p>
+    <button onclick="innerFunc()">Click!</button>
+
+    <script>
+        // 버튼 클릭 시 ,
+        function innerFunc(){
+            let str = document.getElementById('text')
+       console.log(str)         ///// 통으로 가져오기 때문에 안쪽 내용이 안보인다. 
+
+        // 요소 안에 '내용만'  가지고 올 때  .innerText
+         console.log(str.innerText)
+
+        //요소 안에 내용을 수정하고 싶을 때
+          // str.innerText=' <h1>텍스트 수정! </h1>'       ///// 이 모양은 원하는 모양이 아니다
+
+          // 태그까지 적용하고 싶을 때 
+         str.innerHTML='<h1>텍스트 수정! </h1>'
+        }
+
+       
+
+    </script>
+
+
+</body>
+</html>

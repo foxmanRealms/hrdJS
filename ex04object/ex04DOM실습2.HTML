@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <span id="span1">0</span>
+    <br>
+    <button onclick="plus()">+1증가</button>
+    <button onclick="minus()">-1감소</button>
+    <button onclick="reset()">초기화</button>
+
+    <script>
+        // 1. 수정해야하는 span태그 요소 가지고와주기 => span 변수 
+        let span = document.getElementById('span1');
+
+
+        // 2. 버튼을 누를 때 마다 값을 가져오기 
+        // 3. 각각 1씩 증가, 1씩 감소, 0으로 세팅 
+        function plus(){
+            let spanNum = Number(span.innerHTML)
+            span.innerHTML = spanNum + 1;
+        }
+
+        function minus(){
+            let spanNum = Number(span.innerHTML)
+            if(spanNum>0){
+                span.innerHTML = spanNum-1;
+            }
+        }
+
+        function reset(){
+            span.innerHTML = 0;
+        }
+
+    </script>
+
+</body>
+</html>

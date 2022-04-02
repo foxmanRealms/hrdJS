@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <!-- 1. 파일을 다운로드 받아서 사용 -->
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+
+    <!-- 2. CDN을 이용해서 사용 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <button id='like'>좋아요</button><span>0</span>
+  <br>
+  <input type="text"><button class='writeCom'>댓글작성</button>
+  <br>
+  <div id="com">
+    <!-- 댓글이 들어가는 공간 -->
+  </div>
+
+  <script>
+      // 1. id가 like인 '좋아요' 버튼을 눌렀을 때, 숫자 증가 + 텍스트를 변경
+
+      //////첫번째 파라미터 : 행위 (ex . click ) 
+      /////두번째 파라미터 : 지정자 (ex. h1태그, #like) 
+      /////세번째 파라미터 : 지정한 행위 (ex.function(){}~)  
+      $(document).on('click', '#like', function(){
+        // 내용 좋아요 숫자 0 -> id : like
+        // 내용 좋아요 취소 숫자 1 -> id : dislike
+        let like =Number( $('span').text() );
+        $('span').text(like+1) ;
+        $(this).text('좋아요 취소!')
+
+        // id속성을 삭제 : removeAttr      아이디 속성을 단순히 교체하려고만 했다면, 삭제하는 단계는 스킵해도 문제 없다
+        $(this).removeAttr('id')
+        // id속성을 다시 부여 : attr
+        $(this).attr('id','dislike')
+
+        })
+      // 2. id가 dislike인 '좋아요 취소' 버튼을 눌렀을 때, 숫자는 다시 0으로 
+      // 텍스트도 다시 '좋아요'로, id도 다시 like로 
+        $(document).on('click','#dislike',function(){
+            $('span').text('0')
+            $(this).text('좋아요')
+            $(this).attr('id','like')
+
+
+        })
+
+
+
+      // 3. Class가 writeCom인 버튼을 클릭했을 때, input 안에 있는 값을 가지고 온다!
+      // 그 내용 + 삭제버튼(Class name 부여) 을 div 안에 넣어준다 
+      // val값 초기화 
+        ///// 동적처리??? 무슨 뜻인지    새로고침?
+      $('.writeCom').click( function(){
+        let com = $('input[input=text]').val();  ///// 마지막 소괄호를 반드시 써야한다. 
+      
+        // Case 1. 댓글을 하나만 작성
+        ///// console.log(com);  중간확인
+      $('#com').html('<span>'+com+'</span><button class="removeCom">삭제</button>')
+
+        // Case2. 여러개의 댓글을 작성  : .prepend()       ////// 앞요소들은 유지하고 계속 쌓는다. span으로는 옆으로 쌓이기 때문에, p태그로 쌓는다
+      //  $('#com').prepend('<p>'+com+'<button class="removeCom">삭제</button></p>')
+      
+      
+        // input 태그 안의 값을 공백처리 
+        $('input[input=text]').val('')
+      })
+
+      // 4. 삭제 버튼 클릭 시, 태그 삭제
+              ////// 동적요소들은 on으로 들어가기 때문에,  일반 클릭과 on클릭이 헷갈린다면 on을 쓰는것이 이롭다
+      // 세개의 파라미터 -> 행위(ex. 클릭) , 지정자 (ex h1태그, p태그, 아이디~~~ 등) , 지정한 행위((ex.function(){ 로직작성})~ )
+      $(document).on('click','.removeCom',function(){
+          // Case 1. 하나의 댓글 삭제
+          $('div').remove()
+      })
+
+  </script>
+
+</body>
+</html>

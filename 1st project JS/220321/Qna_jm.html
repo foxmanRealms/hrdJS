@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문의하기jm</title>
+</head>
+<body>
+    <!-- <%
+			ArrayList<BoardDTO> list = new BoardDAO().showBoard();
+		%> -->
+
+        
+        <table border="1">
+            <thead>문의하기</thead>
+            <tbody>
+                <tr>
+                <td align="center" colspan="5" name="공란"> (공지) 문의하기 게시판 필독</td>
+            </tr>
+            <tr>
+                <td align="center" colspan="5" name="공란">(공지) 추가기능 안내</td>
+                
+            </tr>
+            <hr>
+            
+            <!-- <% for(int i=0; i<list.size(); i++){%>
+                <tr>
+                    <td><%= i+1 %></td>
+                    <td> <a href="boardSelectOne.jsp?num=<%= list.get(i).getNum()%>"> <%= list.get(i).getTitle() %></a></td>
+                    <td><%= list.get(i).getWriter() %></td>
+                    <td><%= list.get(i).getB_day() %></td>
+                </tr>
+                <% }%> -->
+                
+                
+                <tr >
+                    
+                    <td align="center"> <input type="checkbox" name="  "></td>
+                    <td name="공란"> "새 글마크"</td>
+                    <td name="qna_title"> <a href="" >"qna_title" </a>    </td>
+                <td name="공란">"조회수"</td>
+                <td name="공란">"답변 수"</td>
+                
+            </tr>
+            
+            <tr>
+                <form action="공란" method="공란">
+                <td colspan="3"align="center"><input type="text" name="공란"> 
+                    <input type="submit" value="검색" >
+                </td>
+                 <td colspan="2" align="center">
+                    <button><a href="">글쓰기</a></button>
+                    <button><a href="">삭제</a></button>
+                    <button><a href="">목록</a></button>
+
+                </td>   
+                </form>
+
+            </tr>
+
+            <tr>
+               <td colspan="5" align="center">
+                   <button><a href="">"이전 페이지"</a></button>
+               <button> <a href="">"1 페이지"</a></button>
+               <button> <a href="">"2 페이지"</a></button>
+               <button> <a href="">"특정 페이지"</a></button>
+               <button><a href="">"다음 페이지"</a></button></td> 
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

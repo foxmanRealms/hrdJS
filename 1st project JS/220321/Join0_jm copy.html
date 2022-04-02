@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="">
+        <!-- 사용자와의 관계  라디오 -->
+        <!-- <hr> -->
+        <!-- 회사명  인풋-->
+        <!-- 회사 전화번호   인풋-->
+        <!-- 복지사 면허번호   인풋-->
+       <!-- <hr> -->
+        <!-- 아이디 인풋  중복확인 버튼-->
+        <!-- 비밀번호   인풋-->
+        <!-- 비밀번호 확인   인풋-->
+       <!-- <hr> -->
+        <!-- 이름  인풋-->
+        <!-- 생년월일 인풋 1 + 월 // 일 -->
+        <!-- 연락처  숫자 인풋-->
+        <!-- 성별  라디오 3개   0 남자 1 여자 2 없음 -->
+        <!-- 주소  우편번호 인풋  검색버튼  상세주소 인풋 -->
+           
+
+
+        <!-- 사용자와의 관계  라디오   복지사는 0 보호자는 1 -->
+        <thead>
+           
+        </thead>
+        <tbody>
+        <tr>사용자와의 관계
+            <td>
+            복지사(기관) <input type="radio" name="user_type" value="0">
+             보호자(가족) <input type="radio" name="user_type" value="1">
+        </td>
+        </tr>
+        <hr>
+        <tr>회사명
+            <td>
+            <input id="" type="text" name="    " placeholder="회사명을 입력하세요."> 
+            </td>
+        </tr><br>
+        <tr>회사 전화번호
+            <td>
+            <input id="" type="text" name="        " placeholder="숫자만 입력해 주세요."> 
+            </td>
+        </tr><br>
+        <tr>복지사 면허번호
+            <td>
+            <input id="" type="text" name="user_license" placeholder="숫자만 입력해 주세요."> 
+            </td>
+        </tr><br>
+        <hr>
+        <tr>아이디
+            <input id="" type="text" name="user_id" placeholder="아이디를 입력해 주세요."> 
+            <button type="button" id="btn"> 중복확인 </button> 
+        </tr><br>
+        <tr>비밀번호
+            <tr><input type="password" name="user_pw" placeholder="5자리 이상 입력해 주세요."></tr>
+        </tr><br>
+        <tr>비밀번호 확인
+            <tr><input type="password" name="user_pw" placeholder="다시 한 번 입력해 주세요."></tr>
+        </tr><br>
+        <hr>
+        <tr>이름
+            <tr><input type="text" name="user_name" placeholder="이름을 입력해 주세요."></tr>
+        </tr><br>
+        <tr>생년월일
+            <tr><input type="date" name="user_birthdate" placeholder="이름을 입력해 주세요."></tr>
+        </tr><br>   
+        <tr>연락처
+            <tr><input type="text" name="user_phone" placeholder="숫자만 입력해 주세요."></tr>
+        </tr><br>
+        <tr>성별
+           <td> 남자 <input type="radio" name="user_gender" value="male"></td>
+           <td> 여자 <input type="radio" name="user_gender" value="female"></td>
+           <td> 선택안함 <input type="radio" name="user_gender" value="none"></td>
+        </tr><br>
+        <tr>주소
+            <tr><input type="text" name="user_region" placeholder="주소를 입력해 주세요."></tr>
+        </tr><br>
+        
+            <tr><input type="submit" value="가입하기" ></tr>
+        </tbody>
+        </table>
+    </form>
+    <br><br><br><br><br><br><br><br><br><br>
+
+    <!-- form : 데이터를 전송할 때 사용하는 태그 -->
+    <form action="
+     <!-- type="text" : 데이터를 입력할 수 있는 태그 -->
+     <!-- name속성 : 사용자가 입력한 값을 구분하기 위해서 지정 -->
+     아이디 입력 : <input type="text" name="id" value="smhrd"> <br>
+     이름 입력 : <input type="text" name="name" placeholder="이름을 입력하세요"> 
+     비밀번호 입력 : <input type="password" name="pw"> 
+    <hr>
+    <!-- 목록상자 : select -->
+    메일 선택
+    <select name="mail" >
+        <option value="naver">네이버</option>
+        <option value="google">구글</option>
+        <option value="daum">다음</option>
+    </select>
+
+    <hr>
+    <h3>체크박스 : 좋아하는 음식을 고르시오</h3>
+    <!-- type="checkbox" 여러개 선택 가능 -->
+    치킨 <input type="checkbox" name="food" value="chicken">
+    파스타 <input type="checkbox" name="food" value="pasta">
+    피자 <input type="checkbox" name="food" value="pizza">
+
+    <h3> 체크 박스 : 좋아하는 취미를 고르시오</h3>
+    게임 <input type="checkbox" name="hobby" value="game">
+    낮잠 <input type="checkbox" name="hobby" value="sleep">
+
+    <hr>
+    
+    <h3>라디오 : 당신의 성별을 고르시오</h3>
+    <!-- type="radio"  한개만 선택 가능-->
+    여성 <input type="radio" name="gender" value="female">
+    남성 <input type="radio" name="gender" value="male">
+    여성 <input type="radio" name="sex" value="female">
+    남성 <input type="radio" name="sex" value="male">
+
+    <!-- intput : radio  입력하면 라디오 자동완성 된다. -->
+
+    <hr>
+    파일선택
+    <input type="file" name="img" >
+
+    <hr> 
+    색깔선택
+    <input type="color" name="color">   
+
+    <hr>
+    숫자선택
+    <input type="number" name="age">
+
+    <hr>
+    날짜선택
+    <!-- 날짜만 date -->
+    <input type="date" name="birthday">
+    <!-- 날짜 +시간 datetime=local -->
+    <input type="datetime-local" >
+
+    <hr>
+
+    게시글 작성 <br>
+    <!-- cols : 열의 크기(가로) 
+            row : 행의 길이(세로)-->
+    <textarea name="board" id="" cols="20" rows="5" style="resize:none ;">
+
+    </textarea>
+
+    <hr>
+    <!-- reset : input요소의 모든 값을 초기화 -->
+    <input type="reset" value="다 지우기!">
+
+    <!-- reset : input요소의 모든 값을 전송할때 누르는 버튼 -->
+    <input type="submit" value="회원가입">
+
+    </form>
+    <br><br><br><br><br><br><br><br><br><br>
+
+   <!--  정렬 : 드래그 한 후에 컨트롤+k+f -->
+
+</body>
+</html>

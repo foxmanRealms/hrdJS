@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 1. 파일을 다운로드 받아서 사용 -->
+    <!-- <script src="./js/jquery-3.6.0.min.js"></script> -->
+
+    <!-- 2. CDN을 이용해서 사용 -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <div id="pp"></div>
+    <button onclick="aa()">요청</button>
+    <script>
+       // API 활용하기 
+        function aa(){
+            $.ajax({
+                url :'http://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchWeeklyBoxOfficeList.json?key=bb4b123db0add59a411a5fb581323aa0&targetDt=20220301',
+                type:'get',
+                success :function(res){
+                //    for(let i =0;i<res.boxOfficeResult.weeklyBoxOfficeList.length;i++){
+
+                //        console.log(res.boxOfficeResult.weeklyBoxOfficeList[i].movieNm)
+                //    }
+                // let str ='<h3>순위</h3>'
+                //      str +='<h1>영화제목</h1>'
+                //      str +='<h1>개봉일자</h1>'
+
+                let str ='<table>3월 박스오피스</table>'
+                str +='<th> 순위 </th>'
+                str +='<th> 영화제목 </th>'
+                str +='<th> 개봉일자 </th><br>'
+                
+                let rk ='res.boxOfficeResult.weeklyBoxOfficeList[i].rank'
+                let Nm ='res.boxOfficeResult.weeklyBoxOfficeList[i].movieNm'
+                let Dt= 'res.boxOfficeResult.weeklyBoxOfficeList[i].openDt'
+
+                for(let i =0;i<res.boxOfficeResult.weeklyBoxOfficeList.length;i++){
+                    str +='<td>'+rk+'</td>'
+                    str +='<td>'+Nm+'</td>'
+                    str +='<td>'+Dt+'</td><br>'
+                }
+                
+                // for(let i =0;i<res.boxOfficeResult.weeklyBoxOfficeList.length;i++){
+                //     str +='<td>'+ 'res.boxOfficeResult.weeklyBoxOfficeList[i].rank' +'</td>'
+                //     str +='<td>'+ 'res.boxOfficeResult.weeklyBoxOfficeList[i].movieNm' +'</td>'
+                //     str +='<td>'+ 'res.boxOfficeResult.weeklyBoxOfficeList[i].openDt' +'</td><br>'
+                // }
+                
+                $('#pp').html(str)
+
+                //    }
+                   
+
+                },
+                error : function(){
+                ////// 에러발생하면 넘어오는 정보는 없다
+                alert('ERROR')
+                }
+
+            })
+
+        }
+
+
+        ///// 문제풀이 접근 
+        ///// div pp 에 내용 삽입   필요한 내용 순위 영화제목 개봉일자 
+        
+        
+
+        ////// 긴내용들은 변수처리 해서 삽입하자 
+    </script>
+</body>
+</html>

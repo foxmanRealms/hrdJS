@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        // (1) 사용자에게 기호 emoji를 입력받는다
+        let emoji = prompt('기호를 입력하시오.')
+        // (2) 몇줄 출력할지 입력받는다
+        let row = Number( prompt('몇 줄을 출력할지 입력하시오.') )
+        // (3) emoji 피라미드를 만들어주는 function pyramid 선언
+        function pyramid(emoji,row){
+            for(let i=1; i<=row;i++) {       ////// 첫번째 줄.   row까지 반복해서 찍는다
+                
+                for(let j=1; j<=i;j++) {       ////// 첫번째 줄.   row까지 반복해서 찍는다
+                    document.write(emoji)
+
+                }
+
+            document.write('<br>')
+            }
+        }
+        // (4) 피라미드 호출!
+
+        pyramid(emoji,row)
+
+        // 호이스팅이란? 함수 안에 있는 선언들을 끌어올려서 최상단에 선언해주는 것.
+        //   자바처럼 순서에 예민하지 않다. 
+
+       
+
+
+        
+    </script>
+</body>
+</html>

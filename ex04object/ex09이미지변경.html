@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width :300px
+
+        }
+        </style>
+</head>
+<body>
+    <img src="https://t4.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2D9/image/3wVLznB4oO_jaIOsvWggCC-2Gmk.jpg" id="img1">
+    <!-- <img src="https://images.gettyimageskorea.com/t500/54/964/1184854964.jpg" id="id="img1"> -->
+    <br>
+    <button onclick="ch()">이미지 변경!</button>
+
+    
+
+
+
+    <script>
+        function ch(){
+            // 만약에, img태그의 src속성이 ~라면 
+            
+            // 1. .getElement ~
+            // let img = document.getElementById('img1')
+            
+            // 2. .querySelector~
+            let img=document.querySelector('#img1')
+
+            if (img.src=='https://t4.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2D9/image/3wVLznB4oO_jaIOsvWggCC-2Gmk.jpg' ){
+                img.src='https://images.gettyimageskorea.com/t500/54/964/1184854964.jpg'
+                
+            } else {
+                img.src='https://t4.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/2D9/image/3wVLznB4oO_jaIOsvWggCC-2Gmk.jpg'
+            }
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <body id='bodyTag'>
+        <a href="#">안녕하세요!</a>
+        <br><br>
+        <button id="btn1">Design Change! 💖</button>
+        <button id="btn2">Revert 🌟</button>
+        <br>
+    
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>Javascript</li>
+        </ul>
+    
+        <h1>오늘은 3/2</h1>
+        <p>즐거운 JS 수업입니다! 🎊</p>
+
+        <script>
+            document.getElementById('btn1').addEventListener('click',function(){  /// 이름이 btn1인 애들을 끌어온다  이벤트를 듣고 있어라  클릭 이벤트가 발생하면 기능을 부여하겠다
+                document.getElementById('bodyTag').style.backgroundColor ='black';
+
+                // 글자색 = whitesmoke            글자색을 컬러를 사용한다. 
+                document.getElementById('bodyTag').style.color ='whitesmoke';
+               
+
+            }   )
+                // Revert 버튼을 눌렀을때는 다시 원상 복귀 
+            document.getElementById('btn2').addEventListener('click',function(){
+                document.getElementById('bodyTag').style.backgroundColor ='whitesmoke';
+
+                document.getElementById('bodyTag').style.color ='black';
+
+            }   ) 
+        </script>
+    
+</body>
+</html>

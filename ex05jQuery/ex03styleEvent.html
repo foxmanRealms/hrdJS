@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>마우스를 올리셨군요!</h1>
+
+    <script>
+        //스타일 단일 등록
+        $('h1').css('background-color','red')
+
+        // jQuery 스타일을 다중 등록 하는법
+        $('h1').css({
+            'background-color' : 'black',
+            'color': 'white',
+            'font-size': '50px'
+        })
+
+        $(function(){
+            $('h1').on({
+                click:function(){
+                    $('h1').css({
+                        'background-color' : 'pink',
+                        'color': 'brown'
+                    })
+                },
+                mouseenter : function(){
+                    //배경 whitesmoke, 글자색상 black
+                    $(this).css({
+                        'background-color': 'whitesmoke',
+                        'color':'black'
+                    })
+                }
+            })
+        })
+    </script>
+</body>
+</html>

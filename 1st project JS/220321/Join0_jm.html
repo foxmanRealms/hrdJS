@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 복지사jm</title>
+</head>
+<body>
+    <form action="공란" method="공란">
+        
+        <!-- 사용자와의 관계  라디오   복지사는 0 보호자는 1 -->
+        <thead>
+           
+        </thead>
+        <tbody>
+        <tr>사용자와의 관계
+            <td>
+            복지사(기관) <input type="radio" name="user_type" value="0">
+             보호자(가족) <input type="radio" name="user_type" value="1">
+        </td>
+        </tr>
+        <hr>
+        <tr>회사명
+            <td>
+            <input id="" type="text" name="user_co" placeholder="회사명을 입력하세요."> 
+            </td>
+        </tr><br>
+        <tr>회사 전화번호
+            <td>
+            <input id="" type="text" name="user_coPhone" placeholder="숫자만 입력해 주세요."> 
+            </td>
+        </tr><br>
+        <tr>복지사 면허번호
+            <td>
+            <input id="" type="text" name="user_license" placeholder="숫자만 입력해 주세요."> 
+            </td>
+        </tr><br>
+        <hr>
+        <tr>아이디
+            <input id="" type="text" name="user_id" placeholder="아이디를 입력해 주세요."> 
+            <button type="button" id="btn"> 중복확인 </button> 
+        </tr><br>
+        <tr>비밀번호
+            <tr><input type="password" name="user_pw" placeholder="5자리 이상 입력해 주세요."></tr>
+        </tr><br>
+        <tr>비밀번호 확인
+            <tr><input type="password" name="user_pw" placeholder="다시 한 번 입력해 주세요."></tr>
+        </tr><br>
+        <hr>
+        <tr>이름
+            <tr><input type="text" name="user_name" placeholder="이름을 입력해 주세요."></tr>
+        </tr><br>
+        <tr>생년월일
+            <tr><input type="date" name="user_birthdate" placeholder="이름을 입력해 주세요."></tr>
+        </tr><br>   
+        <tr>연락처
+            <tr><input type="text" name="user_phone" placeholder="숫자만 입력해 주세요."></tr>
+        </tr><br>
+        <tr>성별
+           <td> 남자 <input type="radio" name="user_gender" value="0"></td>
+           <td> 여자 <input type="radio" name="user_gender" value="1"></td>
+           <td> 선택안함 <input type="radio" name="user_gender" value="2"></td>
+        </tr><br>
+        <tr>주소
+            <tr><input type="text" name="user_region" placeholder="주소를 입력해 주세요."></tr>
+        </tr><br>
+        
+            <tr><input type="submit" value="가입하기" ></tr>
+        </tbody>
+        </table>
+    </form>
+
+</body>
+</html>
